@@ -10,6 +10,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.innerShadow
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.composedemo.ui.theme.ComposeDemoTheme
 
@@ -42,6 +43,8 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     ComposeDemoTheme {
-        Greeting("Android")
+        Scaffold(modifier = Modifier.fillMaxSize()) {innerPadding ->
+            Greeting("Compose", modifier = Modifier.padding(innerPadding))
+        }
     }
 }

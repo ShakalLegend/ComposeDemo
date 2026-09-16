@@ -26,7 +26,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             ComposeDemoTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-
+                    DemoScreen(Modifier.padding(innerPadding))
                 }
             }
         }
